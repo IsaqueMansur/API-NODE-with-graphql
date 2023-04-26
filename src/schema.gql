@@ -3,6 +3,21 @@
 # !!!   DO NOT MODIFY THIS FILE BY YOURSELF   !!!
 # -----------------------------------------------
 
+type Appointment {
+  endsAt: String!
+  startsAt: String!
+}
+
+input CreateAppointmentInput {
+  customerId: String!
+  endsAt: String!
+  startAt: String!
+}
+
+type Mutation {
+  createAppointment(data: CreateAppointmentInput!): Appointment!
+}
+
 type Query {
   helloWorld: String!
 }
